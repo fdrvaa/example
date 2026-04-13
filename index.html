@@ -61,38 +61,6 @@
       color: #cbd5e1;
     }
 
-    .search-box {
-      margin: 20px auto 30px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      max-width: 500px;
-    }
-
-    .search-box input {
-      flex: 1;
-      padding: 14px;
-      border-radius: 12px;
-      border: none;
-      font-size: 16px;
-      outline: none;
-    }
-
-    .search-box button {
-      padding: 14px 20px;
-      border-radius: 12px;
-      border: none;
-      background: #38bdf8;
-      color: #0f172a;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .search-box button:hover {
-      background: #7dd3fc;
-    }
-
     .btn {
       background: #38bdf8;
       color: #0f172a;
@@ -173,16 +141,9 @@
   <section class="hero">
     <h1>Современный сайт за 5 минут</h1>
     <p>
-      Это пример простого, аккуратного и адаптивного сайта.
+      Это пример простого, аккуратного и адаптивного сайта, который можно взять за основу
+      и дальше дорабатывать под свои задачи.
     </p>
-
-    <!-- Поисковая строка -->
-    <form class="search-box" action="https://ya.ru/search/" method="GET">
-      <input type="hidden" name="clid" value="13910642">
-      <input type="text" name="text" placeholder="Поиск в Яндексе..." required>
-      <button type="submit">Найти</button>
-    </form>
-
     <button class="btn" onclick="showMessage()">Нажми на меня</button>
   </section>
 
@@ -191,20 +152,20 @@
   <section class="features">
     <div class="card">
       <h3>Быстро</h3>
-      <p>Легкая структура сайта без лишних библиотек.</p>
+      <p>Легкая структура сайта без лишних библиотек и сложной настройки.</p>
     </div>
     <div class="card">
       <h3>Красиво</h3>
-      <p>Современный UI с эффектами.</p>
+      <p>Градиентный фон, полупрозрачные карточки и приятные hover-эффекты.</p>
     </div>
     <div class="card">
       <h3>Удобно</h3>
-      <p>Адаптивный дизайн под любые устройства.</p>
+      <p>Адаптивная сетка позволяет сайту хорошо выглядеть и на телефоне, и на компьютере.</p>
     </div>
   </section>
 
   <footer>
-    © 2026 My Demo Site.
+    © 2026 My Demo Site. Все права условно защищены.
   </footer>
 
   <script>
@@ -212,9 +173,9 @@
       const message = document.getElementById("message");
       const phrases = [
         "Сайт работает.",
-        "Поиск подключен.",
-        "Можно интегрировать монетизацию.",
-        "Все готово."
+        "Кнопка нажалась успешно.",
+        "JavaScript подключен.",
+        "Можно делать что-то сложнее."
       ];
 
       const randomText = phrases[Math.floor(Math.random() * phrases.length)];
