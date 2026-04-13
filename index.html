@@ -127,6 +127,12 @@
     }
   </style>
 </head>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>Verification: 4b1ea37b97fd2b5f</body>
+</html>
 <body>
   <header>
     <div class="logo">FIRESITE</div>
@@ -144,6 +150,17 @@
       Это пример простого, аккуратного и адаптивного сайта, который можно взять за основу
       и дальше дорабатывать под свои задачи.
     </p>
+
+<input type="text" id="searchInput" placeholder="Поиск в Яндексе...">
+<button onclick="search()">Найти</button>
+
+<script>
+function search() {
+  var query = document.getElementById('searchInput').value;
+  window.location.href = "https://ya.ru/search/?clid=13910642&text=" + encodeURIComponent(query);
+}
+</script>
+
     <button class="btn" onclick="showMessage()">Нажми на меня</button>
   </section>
 
