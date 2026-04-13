@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Demo Site</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 24px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      opacity: 0.85;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #cbd5e1;
+    }
+
+    .btn {
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      padding: 14px 28px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #7dd3fc;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1100px;
+      margin: 0 auto 60px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 24px;
+      transition: transform 0.3s, background 0.3s;
+      backdrop-filter: blur(8px);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .message {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 60px;
+      color: #7dd3fc;
+      min-height: 28px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">FIRESITE</div>
+    <nav>
+      <a href="#">Главная</a>
+      <a href="#">О нас</a>
+      <a href="#">Услуги</a>
+      <a href="#">Контакты</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Современный сайт за 5 минут</h1>
+    <p>
+      Это пример простого, аккуратного и адаптивного сайта, который можно взять за основу
+      и дальше дорабатывать под свои задачи.
+    </p>
+
+
+
+    <button class="btn" onclick="showMessage()">Нажми на меня</button>
+  </section>
+
+  <div class="message" id="message"></div>
+
+  <section class="features">
+    <div class="card">
+      <h3>Быстро</h3>
+      <p>Легкая структура сайта без лишних библиотек и сложной настройки.</p>
+    </div>
+    <div class="card">
+      <h3>Красиво</h3>
+      <p>Градиентный фон, полупрозрачные карточки и приятные hover-эффекты.</p>
+    </div>
+    <div class="card">
+      <h3>Удобно</h3>
+      <p>Адаптивная сетка позволяет сайту хорошо выглядеть и на телефоне, и на компьютере.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 My Demo Site. Все права условно защищены.
+  </footer>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById("message");
+      const phrases = [
+        "Сайт работает.",
+        "Кнопка нажалась успешно.",
+        "JavaScript подключен.",
+        "Можно делать что-то сложнее."
+      ];
+
+      const randomText = phrases[Math.floor(Math.random() * phrases.length)];
+      message.textContent = randomText;
+    }
+  </script>
+</body>
+</html>
